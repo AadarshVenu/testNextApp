@@ -80,7 +80,7 @@ export default function MyModal({ show, handleModal }) {
 
 
             <Modal.Body className="pt-5">
-                <div className="col-12 d-block d-lg-none mb-3 mt-5 p-0">
+                <div className="col-12 d-block d-lg-none mb-3 mt-3 p-0">
                     <Carousel />
                 </div>
                 <div className="container-fluid px-4">
