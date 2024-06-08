@@ -42,7 +42,7 @@ export default function ModalImageContainer() {
         >
             <div
                 style={{
-                    height: "70%",
+                    height: "74%",
                     width: "100%",
                 }}
             >
