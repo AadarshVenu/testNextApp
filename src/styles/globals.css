@@ -26,4 +26,5 @@
   
 .modal-body {
   padding: 0;
+  overflow-x: hidden !important;
 }

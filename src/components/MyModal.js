@@ -8,14 +8,13 @@ import {
     modalUtilties1,
     modalUtilties2,
     amenities,
-    mobileUtilities
+    mobileUtilities,
 } from "../Utilities/Constants";
 import ModalImageContainer from "./ModalImageContainer";
 import Carousel from "./Carousel";
 import UtiltiesRender from "./UtiltiesRender";
 
 export default function MyModal({ show, handleModal }) {
-
     const renderAmenities = () =>
         amenities.map((item, index) => (
             <div
@@ -31,29 +30,25 @@ export default function MyModal({ show, handleModal }) {
 
     const renderUtitlitiesForMobile = () => (
         <div className="d-flex flex-wrap">
-            {
-                mobileUtilities.map((item, index) => (
-                    <div key={index} className="col-6">
-                        <div className="d-flex align-items-center mt-2">
-                            <img
-                                src={item.image?.src}
-                                alt="image"
-                                className={styles.modalUtilties1Image}
-                            />
-                            <div>
-                                <div className={styles.modalUtiltiesMobileDescription}>
-                                    {item.title}
-                                </div>
-                                <div className={styles.modalUtiltiesMobileDescription}>
-                                    {item.description}
-                                </div>
+            {mobileUtilities.map((item, index) => (
+                <div key={index} className="col-6">
+                    <div className="d-flex align-items-center mt-2">
+                        <img
+                            src={item.image?.src}
+                            alt="image"
+                            className={styles.modalUtilties1Image}
+                        />
+                        <div>
+                            <div className={styles.modalUtiltiesMobileDescription}>
+                                {item.title}
                             </div>
-
+                            <div className={styles.modalUtiltiesMobileDescription}>
+                                {item.description}
+                            </div>
                         </div>
-
                     </div>
-                ))
-            }
+                </div>
+            ))}
         </div>
     );
 
@@ -65,109 +60,97 @@ export default function MyModal({ show, handleModal }) {
             fullscreen={true}
             // size="xl"
             className="p-0"
-
         >
-            <div
-                className="d-block d-lg-none"
-            > <div
-                className={styles.closeButton}
-                onClick={() => handleModal(false)}
-            >
-                    ×
-                </div>
-
-            </div>
-
-
             <Modal.Body className="pt-5">
-                <div className="col-12 d-block d-lg-none mb-3 mt-3 p-0">
+                <div>
+                    {" "}
+                    <div
+                        className={styles.closeButton}
+                        onClick={() => handleModal(false)}
+                    >
+                        ×
+                    </div>
+                </div>
+                <div className="col-12 d-block d-lg-none mb-3 mt-3 ">
                     <Carousel />
                 </div>
-                <div className="container-fluid px-4">
+                <div className="px-4">
+                    <div>
+                        <div className="row">
+                            <div className="col-lg-6 p-0 d-none d-lg-block">
+                                <ModalImageContainer />
+                            </div>
 
-                    <div className="row">
-                        <div className="col-lg-6 p-0 d-none d-lg-block">
-                            <ModalImageContainer />
-                        </div>
+                            <div className="col-12 col-lg-6 px-4 ">
+                                <div className={styles.modalTitle}>Tangled Up In Green</div>
 
-                        <div className="col-12 col-lg-6 px-4 ">
+                                <div className={styles.modalDescription}>
+                                    Tangled Up In Green, a vision of Total Environment, is a
+                                    luxury plotted development nestled amidst the lush landscapes
+                                    of Devanahalli. This peaceful hideaway in North Bangalore sits
+                                    on 115 acres and has exclusive residential plots with a modern
+                                    design and green living blend. The plots range from 1800 sq.
+                                    ft. to 7200 sq. ft. You could be fascinated by the botanical
+                                    wonders found at the Tree Museum or…
+                                </div>
+                                <div className="mt-3">
+                                    <div className="row">
+                                        <div className="col-12 col-lg-7">
+                                            <div className="d-none d-lg-block">
+                                                <UtiltiesRender
+                                                    utilities={modalUtilties1}
+                                                    isSecondGroup={false}
+                                                />
+
+                                                <div className="border-top my-2"></div>
+                                                <UtiltiesRender
+                                                    utilities={modalUtilties2}
+                                                    isSecondGroup={true}
+                                                />
+                                            </div>
+                                            <div className="col-12 d-block d-lg-none mb-3 mt-3">
+                                                {renderUtitlitiesForMobile()}
+                                            </div>
+
+                                            <div className="border-top my-2"></div>
+                                            <div className="my-2">
+                                                <div style={{ fontSize: "20px", color: "#272727" }}>
+                                                    30+ Amenities
+                                                </div>
+                                                <div className="d-flex justify-content-between flex-wrap">
+                                                    {renderAmenities()}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 col-lg-5">
+                                            <img
+                                                src={mapImage?.src}
+                                                alt="map"
+                                                className={`${styles.mapImage} w-100`}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="d-none d-lg-block">
+                                    <div className="mt-5 d-flex justify-content-between">
+                                        <div className={styles.primaryButtonForModal}>Chat Now</div>
+                                        <div className={styles.primaryButtonForModal}>Call Now</div>
+                                        <div className={styles.secondaryButtonForModal}>
+                                            Schedule Site Visit
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div
-                                className="d-none d-lg-block"
-                            > <div
-                                className={styles.closeButton}
-                                onClick={() => handleModal(false)}
+                                className={`col-12 d-block d-lg-none mb-3 mt-3 ${styles.stickyButtons}`}
                             >
-                                    ×
-                                </div>
-
-                            </div>
-
-
-                            <div className={styles.modalTitle}>Tangled Up In Green</div>
-
-                            <div className={styles.modalDescription}>
-                                Tangled Up In Green, a vision of Total Environment, is a luxury
-                                plotted development nestled amidst the lush landscapes of
-                                Devanahalli. This peaceful hideaway in North Bangalore sits on
-                                115 acres and has exclusive residential plots with a modern
-                                design and green living blend. The plots range from 1800 sq. ft.
-                                to 7200 sq. ft. You could be fascinated by the botanical wonders
-                                found at the Tree Museum or…
-                            </div>
-                            <div className="mt-3">
-                                <div className="row">
-                                    <div className="col-12 col-lg-7">
-                                        <div className="d-none d-lg-block">
-                                            <UtiltiesRender utilities={modalUtilties1} isSecondGroup={false} />
-
-                                            <div className="border-top my-2" ></div>
-                                            <UtiltiesRender utilities={modalUtilties2} isSecondGroup={true} />
-
-                                        </div>
-                                        <div className="col-12 d-block d-lg-none mb-3 mt-3">
-                                            {renderUtitlitiesForMobile()}
-                                        </div>
-
-                                        <div className="border-top my-2" ></div>
-                                        <div className="my-2">
-                                            <div style={{ fontSize: "20px", color: "#272727" }}>
-                                                30+ Amenities
-                                            </div>
-                                            <div className="d-flex justify-content-between flex-wrap">
-                                                {renderAmenities()}
-                                            </div>
-                                        </div>
+                                <div className="d-flex justify-content-between">
+                                    <div className={styles.primaryButtonForModalMobile}>
+                                        Know More
                                     </div>
-                                    <div className="col-12 col-lg-5">
-                                        <img
-                                            src={mapImage?.src}
-                                            alt="map"
-                                            className={`${styles.mapImage} w-100`}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="d-none d-lg-block">
-                                <div className="mt-5 d-flex justify-content-between">
-                                    <div className={styles.primaryButtonForModal}>Chat Now</div>
-                                    <div className={styles.primaryButtonForModal}>Call Now</div>
-                                    <div className={styles.secondaryButtonForModal}>
+                                    <div className={styles.secondaryButtonForModalMobile}>
                                         Schedule Site Visit
                                     </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div
-                            className={`col-12 d-block d-lg-none mb-3 mt-3 ${styles.stickyButtons}`}
-                        >
-                            <div className="d-flex justify-content-between">
-                                <div className={styles.primaryButtonForModalMobile}>
-                                    Know More
-                                </div>
-                                <div className={styles.secondaryButtonForModalMobile}>
-                                    Schedule Site Visit
                                 </div>
                             </div>
                         </div>
