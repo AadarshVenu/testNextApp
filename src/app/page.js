@@ -16,7 +16,7 @@ export default function Home() {
                 className={styles.primaryButtonForModal}
                 onClick={() => handleModal(true)}
             >
-                Click
+                Launch Now
             </div>
             <div
                 className={styles.webViewModal}

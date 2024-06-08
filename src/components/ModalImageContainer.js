@@ -54,9 +54,9 @@ export default function ModalImageContainer() {
             </div>
             <div
                 style={{
-                    height: "30%",
+                    height: "25%",
                     display: "flex",
-                    justifyContent: "space-around",
+                    justifyContent: "space-between",
                     alignItems: "center",
                     width: "100%",
                     marginTop: "10px"
@@ -66,7 +66,7 @@ export default function ModalImageContainer() {
                 {images?.filter((item) => !item.setAsMainImage)?.map((item, index) => (
                     <div
                         key={index}
-                        className={styles.modalImage}
+                        className={styles.modalImageDiv}
                         onClick={
                             () => handleImageClick(item, index)
                         }

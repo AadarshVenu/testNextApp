@@ -64,27 +64,44 @@ export default function MyModal({ show, handleModal }) {
             onHide={() => handleModal(false)}
             fullscreen={true}
             // size="xl"
-            
+            className="p-0"
+
         >
-            <Modal.Body className="p-4">
+            <div
+                className="d-block d-lg-none"
+            > <div
+                className={styles.closeButton}
+                onClick={() => handleModal(false)}
+            >
+                    ×
+                </div>
+
+            </div>
+
+            <div className="col-12 d-block d-lg-none mb-3 mt-5 p-0">
+                <Carousel />
+            </div>
+            <Modal.Body className={styles.modalContainer}>
+
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6 p-0 d-none d-lg-block">
                             <ModalImageContainer />
                         </div>
 
-                        <div className="col-12 col-lg-6 p-4">
+                        <div className="col-12 col-lg-6 px-4 ">
                             <div
+                                className="d-none d-lg-block"
+                            > <div
                                 className={styles.closeButton}
                                 onClick={() => handleModal(false)}
                             >
-                                ×
+                                    ×
+                                </div>
+
                             </div>
-                            <div className={styles.modalTitle}>Tangled Up In Green</div>
-                            <div className="mt-3"></div>
-                            <div className="col-12 d-block d-lg-none mb-3 mt-3 p-0">
-                                <Carousel />
-                            </div>
+
+
                             <div className={styles.modalTitle}>Tangled Up In Green</div>
 
                             <div className={styles.modalDescription}>
@@ -139,16 +156,17 @@ export default function MyModal({ show, handleModal }) {
                                 </div>
                             </div>
 
-                            <div
-                                className={`col-12 d-block d-lg-none mb-3 mt-3 ${styles.stickyButtons}`}
-                            >
-                                <div className="d-flex justify-content-between">
-                                    <div className={styles.primaryButtonForModalMobile}>
-                                        Know More
-                                    </div>
-                                    <div className={styles.secondaryButtonForModalMobile}>
-                                        Schedule Site Visit
-                                    </div>
+
+                        </div>
+                        <div
+                            className={`col-12 d-block d-lg-none mb-3 mt-3 ${styles.stickyButtons}`}
+                        >
+                            <div className="d-flex justify-content-between">
+                                <div className={styles.primaryButtonForModalMobile}>
+                                    Know More
+                                </div>
+                                <div className={styles.secondaryButtonForModalMobile}>
+                                    Schedule Site Visit
                                 </div>
                             </div>
                         </div>
