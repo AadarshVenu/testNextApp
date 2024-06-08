@@ -76,23 +76,31 @@ export default function MyModal({ show, handleModal }) {
                 </div>
                 <div className="px-4">
                     <div>
-                        <div className="row">
+                        <div className="row"
+                            style={{ height: "100%" }}
+                        >
                             <div className="col-lg-6 p-0 d-none d-lg-block">
                                 <ModalImageContainer />
                             </div>
 
                             <div className="col-12 col-lg-6 px-4 ">
-                                <div className={styles.modalTitle}>Tangled Up In Green</div>
-
-                                <div className={styles.modalDescription}>
-                                    Tangled Up In Green, a vision of Total Environment, is a
-                                    luxury plotted development nestled amidst the lush landscapes
-                                    of Devanahalli. This peaceful hideaway in North Bangalore sits
-                                    on 115 acres and has exclusive residential plots with a modern
-                                    design and green living blend. The plots range from 1800 sq.
-                                    ft. to 7200 sq. ft. You could be fascinated by the botanical
-                                    wonders found at the Tree Museum or…
+                                <div
+                                >
+                                    <div className={styles.modalTitle}>Tangled Up In Green</div>
+                                    <div className="mt-3">
+                                        <div className={styles.modalDescription}>
+                                            Tangled Up In Green, a vision of Total Environment, is a
+                                            luxury plotted development nestled amidst the lush landscapes
+                                            of Devanahalli. This peaceful hideaway in North Bangalore sits
+                                            on 115 acres and has exclusive residential plots with a modern
+                                            design and green living blend. The plots range from 1800 sq.
+                                            ft. to 7200 sq. ft. You could be fascinated by the botanical
+                                            wonders found at the Tree Museum or…
+                                        </div>
+                                    </div>
                                 </div>
+
+
                                 <div className="mt-3">
                                     <div className="row">
                                         <div className="col-12 col-lg-7">
@@ -132,12 +140,30 @@ export default function MyModal({ show, handleModal }) {
                                     </div>
                                 </div>
                                 <div className="d-none d-lg-block">
-                                    <div className="mt-5 d-flex justify-content-between">
-                                        <div className={styles.primaryButtonForModal}>Chat Now</div>
-                                        <div className={styles.primaryButtonForModal}>Call Now</div>
-                                        <div className={styles.secondaryButtonForModal}>
-                                            Schedule Site Visit
+                                    <div className="mt-5 row">
+                                        <div
+                                            className="col-3"
+                                        >
+
+                                            <div className={styles.primaryButtonForModal}>Chat Now</div>
                                         </div>
+                                        <div
+                                            className="col-3"
+                                        >
+
+                                            <div className={styles.primaryButtonForModal}>Call Now</div>
+                                        </div>
+                                        <div
+                                            className="col-6"
+                                        >
+                                            <div className={styles.secondaryButtonForModal}>
+                                                Schedule Site Visit
+                                            </div>
+
+                                        </div>
+
+
+
                                     </div>
                                 </div>
                             </div>

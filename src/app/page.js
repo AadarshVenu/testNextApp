@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <div className={styles.pageStyle}>
             <div
-                className={styles.primaryButtonForModal}
+                className={styles.primaryButton}
                 onClick={() => handleModal(true)}
             >
                 Launch Now

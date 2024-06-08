@@ -11,7 +11,17 @@
   background-color: #fff;
   color: #b27e02;
   border: 1px solid #b27e02;
-  padding: 9px 53px 9px 53px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 98%;
+  text-align: center;
+}
+.primaryButton {
+  background-color: #fff;
+  color: #b27e02;
+  border: 1px solid #b27e02;
+  padding: 9px 40px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -19,9 +29,10 @@
   background-color: #b27e02;
   color: #fff;
   border: 1px solid #b27e02;
-  padding: 9px 53px 9px 53px;
+  padding: 9px 30px;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 .primaryButtonForModal:hover {
   background-color: #b27e02 !important;
@@ -195,4 +206,8 @@
   padding: 10px 0;
   z-index: 1000;
   width: 100%;
+}
+.customModal {
+  width: 90% !important;
+  height: 90% !important;
 }
