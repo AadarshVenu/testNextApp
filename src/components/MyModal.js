@@ -81,7 +81,7 @@ export default function MyModal({ show, handleModal }) {
             <div className="col-12 d-block d-lg-none mb-3 mt-5 p-0">
                 <Carousel />
             </div>
-            <Modal.Body className={styles.modalContainer}>
+            <Modal.Body className="pt-5">
 
                 <div className="container-fluid">
                     <div className="row">
@@ -113,7 +113,7 @@ export default function MyModal({ show, handleModal }) {
                                 to 7200 sq. ft. You could be fascinated by the botanical wonders
                                 found at the Tree Museum or…
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-3">
                                 <div className="row">
                                     <div className="col-12 col-lg-7">
                                         <div className="d-none d-lg-block">
