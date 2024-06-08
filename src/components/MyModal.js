@@ -78,12 +78,13 @@ export default function MyModal({ show, handleModal }) {
 
             </div>
 
-            <div className="col-12 d-block d-lg-none mb-3 mt-5 p-0">
-                <Carousel />
-            </div>
-            <Modal.Body className="pt-5">
 
-                <div className="container-fluid">
+            <Modal.Body className="pt-5">
+                <div className="col-12 d-block d-lg-none mb-3 mt-5 p-0">
+                    <Carousel />
+                </div>
+                <div className="container-fluid px-4">
+
                     <div className="row">
                         <div className="col-lg-6 p-0 d-none d-lg-block">
                             <ModalImageContainer />
